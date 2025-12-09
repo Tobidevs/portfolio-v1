@@ -319,7 +319,7 @@ export default function MinecraftAvatar({
           width: size,
           height: size * 0.5,
           top: size * 0.01,
-          left: "49%",
+          left: "49.5%",
           transform: "translateX(-50%)",
           zIndex: isCursorInUpperHalf ? 2 : 3,
           transition: "z-index 150ms cubic-bezier(0.4, 0, 0.2, 1)",
