@@ -260,7 +260,7 @@ export default function Home() {
         </div>
 
         {/* Social Links */}
-        <div className="mt-8 flex flex-wrap md:flex-row justify-center gap-3 w-full max-w-xs">
+        <div className="mt-8 flex flex-wrap md:flex-nowrap justify-center gap-3 w-full max-w-xs">
           <a
             href="https://linkedin.com/in/tobiakere"
             target="_blank"
