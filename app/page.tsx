@@ -188,16 +188,24 @@ export default function Home() {
   return (
     <div className="relative min-h-screen">
       {/* Background Video */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        preload="auto"
-        playsInline
-        className="fixed top-0 left-0 w-screen h-screen object-cover -z-10"
-        src="/MinecraftBackground.mp4"
-      />
+<video
+  ref={videoRef}
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  className="fixed top-0 left-0 w-screen h-screen object-cover -z-10"
+  onError={(e) => {
+    console.error("Video failed to load:", e);
+  }}
+  onLoadedData={() => {
+    console.log("Video loaded successfully");
+  }}
+>
+  <source src="/MinecraftBackground.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
       {/* Hero Section */}
       <section
