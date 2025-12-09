@@ -260,7 +260,7 @@ export default function Home() {
         </div>
 
         {/* Social Links */}
-        <div className="mt-8 flex justify-center gap-3 w-full max-w-xs">
+        <div className="mt-8 flex flex-wrap md:flex-row justify-center gap-3 w-full max-w-xs">
           <a
             href="https://linkedin.com/in/tobiakere"
             target="_blank"
@@ -290,7 +290,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="absolute right-5 top-50 flex flex-col h-fit lg:flex lg:flex-1 lg:items-center lg:justify-center lg:pr-8 xl:pr-16 mt-8 lg:mt-0">
+        <div className="hidden md:absolute right-5 top-50 md:flex flex-col h-fit lg:flex lg:flex-1 lg:items-center lg:justify-center lg:pr-8 xl:pr-16 mt-8 lg:mt-0">
           <h1 className="bg-black/50 text-center absolute right-55 top-34 text-3xl">Oluwatobi Akere <span className="block text-xl text-gray-400">Software Engineer</span></h1>
           <MinecraftAvatar
             skinUrl="/minecraft-skin.png"
