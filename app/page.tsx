@@ -7,10 +7,9 @@ const splashTexts = [
   "Probably Debugging!",
   "Dabbling in AI!",
   "Probably Reading!",
-  "Code like a pro!",
-  "Building the future!",
-  "Pixel perfect!",
-  "Git commit master!",
+  "Probably Vibe Coding!",
+  "Probably at the Gym!",
+  "Probably on a Side Quest!",
   "404 sleep not found!",
 ];
 
@@ -203,7 +202,7 @@ export default function Home() {
     console.log("Video loaded successfully");
   }}
 >
-  <source src="/MinecraftBackground.mp4" type="video/mp4" />
+  <source src="https://wrqwbalktadlafsv.public.blob.vercel-storage.com/MinecraftBackground.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 
