@@ -7,8 +7,6 @@ const splashTexts = [
   "Probably Debugging!",
   "Dabbling in AI!",
   "Probably Reading!",
-  "Junior Software Developer!",
-  "AI Software Engineer!",
   "Code like a pro!",
   "Building the future!",
   "Pixel perfect!",
@@ -195,6 +193,7 @@ export default function Home() {
         autoPlay
         loop
         muted
+        preload="auto"
         playsInline
         className="fixed top-0 left-0 w-screen h-screen object-cover -z-10"
         src="/MinecraftBackground.mp4"
