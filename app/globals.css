@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Minecraft Title";
+  src: url("/fonts/MinecraftFontTitle.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Minecraft Regular";
+  src: url("/fonts/MinecraftFontRegular.ttf") format("truetype");
+  font-display: swap;
+}
+:root {
+  --mc-green-light: #7CB342;
+  --mc-green-dark: #558B2F;
+  --mc-yellow: #FFD700;
+  --mc-yellow-dark: #FFC107;
+  --mc-brown: #8D6E63;
+  --mc-brown-dark: #6D4C41;
+  --mc-stone: #9E9E9E;
+  --mc-stone-dark: #616161;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-minecraft-regular), "Minecraft Regular", Arial, sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+* {
+  cursor: url("/MinecraftCursor.png") 0 0, auto;
+}
+
+
+/* Minecraft Title Styling */
+.minecraft-title {
+  font-family: var(--font-minecraft-title), "Minecraft Title", Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 
+    8px 8px 0px rgba(0, 0, 0, 0.8),
+    5px 5px 0px rgba(0, 0, 0, 0.6),
+    0px 0px 20px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+/* Splash Text */
+.splash-text {
+  font-family: var(--font-minecraft-regular), "Minecraft Regular", Arial, sans-serif;
+  color: var(--mc-yellow);
+  text-shadow: 
+    2px 2px 0px rgba(0, 0, 0, 0.8),
+    1px 1px 0px rgba(0, 0, 0, 0.6),
+    0px 0px 10px rgba(255, 215, 0, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Minecraft Button Styling */
+.mc-button {
+  font-family: var(--font-minecraft-regular), "Minecraft Regular", Arial, sans-serif;
+  background: linear-gradient(180deg, var(--mc-green-light) 0%, var(--mc-green-dark) 100%);
+  border: 2px solid;
+  border-color: 
+    rgba(255, 255, 255, 0.3) 
+    rgba(0, 0, 0, 0.5) 
+    rgba(0, 0, 0, 0.5) 
+    rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease;
+  box-shadow: 
+    inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+.mc-button:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.4),
+    0 6px 12px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, #8BC34A 0%, #689F38 100%);
+}
+
+.mc-button:active {
+  transform: scale(1.05) translateY(2px);
+  box-shadow: 
+    inset 0 2px 0 rgba(0, 0, 0, 0.3),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1024px) {
+  .mc-button {
+    max-width: 380px;
+    padding: 14px 28px;
+    font-size: 20px;
+  }
+}
+
+/* Small Minecraft Button Styling */
+.mc-button-small {
+  font-family: var(--font-minecraft-regular), "Minecraft Regular", Arial, sans-serif;
+  background: linear-gradient(180deg, var(--mc-green-light) 0%, var(--mc-green-dark) 100%) !important;
+  border: 2px solid !important;
+  border-color: 
+    rgba(255, 255, 255, 0.3) 
+    rgba(0, 0, 0, 0.5) 
+    rgba(0, 0, 0, 0.5) 
+    rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease;
+  box-shadow: 
+    inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+  max-width: 120px;
+}
+
+.mc-button-small:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.4),
+    0 6px 12px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, #8BC34A 0%, #689F38 100%) !important;
+}
+
+.mc-button-small:active {
+  transform: scale(1.05) translateY(2px);
+  box-shadow: 
+    inset 0 2px 0 rgba(0, 0, 0, 0.3),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1024px) {
+  .mc-button-small {
+    max-width: 140px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Section Styling */
+.section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-family: var(--font-minecraft-title), "Minecraft Title", Arial, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 
+    4px 4px 0px rgba(0, 0, 0, 0.8),
+    2px 2px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* Project Card Styling */
+.project-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid;
+  border-color: 
+    rgba(255, 255, 255, 0.2) 
+    rgba(0, 0, 0, 0.6) 
+    rgba(0, 0, 0, 0.6) 
+    rgba(255, 255, 255, 0.2);
+  padding: 24px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-color: 
+    rgba(255, 255, 255, 0.4) 
+    rgba(0, 0, 0, 0.7) 
+    rgba(0, 0, 0, 0.7) 
+    rgba(255, 255, 255, 0.4);
+}
+
+/* Tech Stack Badge */
+.tech-badge {
+  background: rgba(124, 179, 66, 0.3);
+  border: 2px solid var(--mc-green-light);
+  padding: 8px 16px;
+  display: inline-block;
+  margin: 4px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.tech-badge:hover {
+  background: rgba(124, 179, 66, 0.5);
+  transform: scale(1.1);
+}
+
+/* Timeline Item */
+.timeline-item {
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 4px solid var(--mc-green-light);
+  padding: 20px;
+  margin-bottom: 24px;
+  position: relative;
+  backdrop-filter: blur(4px);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  background: var(--mc-green-light);
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
+/* Contact Form Styling */
+.mc-input {
+  font-family: var(--font-minecraft-regular), "Minecraft Regular", Arial, sans-serif;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid;
+  border-color: 
+    rgba(255, 255, 255, 0.2) 
+    rgba(0, 0, 0, 0.5) 
+    rgba(0, 0, 0, 0.5) 
+    rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  backdrop-filter: blur(4px);
+}
+
+.mc-input:focus {
+  outline: none;
+  border-color: var(--mc-green-light);
+  box-shadow: 0 0 8px rgba(124, 179, 66, 0.4);
+}
+
+.mc-textarea {
+  font-family: var(--font-minecraft-regular), "Minecraft Regular", Arial, sans-serif;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid;
+  border-color: 
+    rgba(255, 255, 255, 0.2) 
+    rgba(0, 0, 0, 0.5) 
+    rgba(0, 0, 0, 0.5) 
+    rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  min-height: 120px;
+  resize: vertical;
+  backdrop-filter: blur(4px);
+}
+
+.mc-textarea:focus {
+  outline: none;
+  border-color: var(--mc-green-light);
+  box-shadow: 0 0 8px rgba(124, 179, 66, 0.4);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .minecraft-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .mc-button {
+    max-width: 100%;
+    font-size: 16px;
+    padding: 15px 25px;
+  }
+  
+  .section {
+    padding: 60px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .minecraft-title {
+    font-size: 2rem !important;
+  }
+}
+
+/* Minecraft Avatar Styling */
+.minecraft-avatar-container {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.minecraft-avatar-container canvas {
+  pointer-events: none;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
